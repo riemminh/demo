@@ -20,6 +20,9 @@ const validateUserInput = data => {
   if (!validate.isEmail(data.email)) {
     errors.email = "Email sai hãy nhập như ví dụ: test@test.com";
   }
+  if (validate.isEmpty(data.email)) {
+    errors.email = "Thông tin quan trọng không được để trống.";
+  }
 
   if (validate.isEmpty(data.phone)) {
     errors.phone = "Thông tin quan trọng không được để trống.";
